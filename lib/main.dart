@@ -91,7 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
         for (var element in elements) {
           String cleanedText = element.text.replaceAll(
-              '', '').trim();
+              RegExp(r'[0-9,]'), '').trim();
           if (cleanedText.contains('Pranzo')) {
             foundPranzo = true;
             foundCena = false;
